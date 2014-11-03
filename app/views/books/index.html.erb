@@ -32,12 +32,12 @@
         <%= book.description %>
       </td>
       <td>
-        <%= button_to "Upvote", book_voteup_path(book.id) %>
+        <%= button_to "Upvote", book_voteup_path(book.id), class:"btn btn-success" %>
       </td>
     </tr>
 
 <% end %>
 </table>
 
-<div><%= link_to "All Media", root_path %>
-<%= link_to "Add a Book", new_book_path %></div>
+<div><%= link_to "All Media", root_path, class:"btn btn-primary active", role:"button" %>
+<%= link_to "Add a Book", new_book_path, class:"btn btn-primary active", role:"button" %></div>

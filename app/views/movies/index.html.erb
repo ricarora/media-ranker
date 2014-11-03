@@ -32,12 +32,12 @@
         <%= movie.description %>
       </td>
       <td>
-        <%= button_to "Upvote", movie_voteup_path(movie.id) %>
+        <%= button_to "Upvote", movie_voteup_path(movie.id), class:"btn btn-success" %>
       </td>
     </tr>
 
 <% end %>
 </table>
 
-<div><%= link_to "All Media", root_path %>
-<%= link_to "Add a Movie", new_movie_path %></div>
+<div><%= link_to "All Media", root_path, class:"btn btn-primary active", role:"button" %>
+<%= link_to "Add a Movie", new_movie_path, class:"btn btn-primary active", role:"button" %></div>

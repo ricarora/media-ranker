@@ -2,7 +2,7 @@
   <div class="sidebar col-xs-4 col-md-4 col-lg-4">
     <h2>Top Movies</h2>
     <% @movies.each do |movie| %>
-    <div><%= link_to movie.name, movie_path(movie.id) %>Ranked:<%= movie.rank %></div>
+    <div class="h3"><%= link_to movie.name, movie_path(movie.id) %><span class="small">Ranked:<%= movie.rank %></span></div>
     <% end %>
     <div>
       <%= link_to "View More Movies", movies_path %>
@@ -11,7 +11,7 @@
   <div class="main col-xs-4 col-md-4 col-lg-4">
     <h2>Top Books</h2>
     <% @books.each do |book| %>
-    <div><%= link_to book.name, book_path(book.id) %>Ranked: <%= book.rank %></div>
+    <div class="h3"><%= link_to book.name, book_path(book.id) %><span class="small">Ranked: <%= book.rank %></span></div>
     <% end %>
     <div>
       <%= link_to "View More Books", books_path %>
@@ -20,7 +20,7 @@
   <div class="main col-xs-4 col-md-4 col-lg-4">
     <h2>Top Albums</h2>
     <% @albums.each do |album| %>
-    <div><%= link_to album.name, album_path(album.id) %>Ranked: <%= album.rank %></div>
+    <div class="h3"><%= link_to album.name, album_path(album.id) %><span class="small">Ranked: <%= album.rank %></span></div>
     <% end %>
     <div>
       <%= link_to "View More Albums", albums_path %>

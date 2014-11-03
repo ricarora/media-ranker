@@ -1,11 +1,14 @@
-<h1><%= @book.name %></h1>
-<h4>Author: <%= @book.author %></h4>
-<h4><strong>Ranking: <%= @book.rank %></strong></h4>
-<p>
-  <%= @book.description %>
-</p>
-<%= button_to "Upvote", book_voteup_path(@book.id) %>
-<%= link_to "Edit #{@book.name}", edit_book_path(@book.id) %>
-<%= button_to "Delete", book_path(@book.id), method: :delete %>
-<%= link_to "View All Books", books_path %>
-<%= link_to "View All Media", root_path %>
+<div class="col-lg-12"><h1><%= @book.name %></h1>
+  <h4>Author: <%= @book.author %></h4>
+  <h4><strong>Ranking: <%= @book.rank %></strong></h4>
+  <p>
+    <%= @book.description %>
+  </p>
+  <%= button_to "Upvote", book_voteup_path(@book.id), class:"btn btn-success" %>
+  <div class="button-display">
+    <%= link_to "Edit #{@book.name}", edit_book_path(@book.id), class:"btn btn-primary active", role:"button" %>
+    <%= button_to "Delete", book_path(@book.id), method: :delete, class:"btn btn-danger" %>
+    <%= link_to "View All Books", books_path, class:"btn btn-primary active", role:"button" %>
+    <%= link_to "View All Media", root_path, class:"btn btn-primary active", role:"button" %>
+  </div>
+</div>

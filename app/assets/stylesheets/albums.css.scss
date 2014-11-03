@@ -6,3 +6,50 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+.button-display {
+  width: 100%;
+  display: inline-block !important;
+}
+
+.delete-display {
+  display: inline-block !important;
+}
+
+.nav-bar {
+  width: 100%;
+  margin: 0 150px;
+  padding: 0px;
+  display: inline-block;
+}
+
+.nav-bar h1 {
+  display: inline-block;
+  font-size: 50px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: absolute;
+  margin-left: 100px;
+}
+
+.nav-bar h4 {
+  display: inline-block;
+  margin-left: 430px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.nav-bar img {
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  width: auto;
+  position: absolute;
+  top: 0;
+}
+
+.container {
+  margin-top: 30px;
+}

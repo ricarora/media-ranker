@@ -32,12 +32,12 @@
         <%= album.description %>
       </td>
       <td>
-        <%= button_to "Upvote", album_voteup_path(album.id) %>
+        <%= button_to "Upvote", album_voteup_path(album.id), class:"btn btn-success" %>
       </td>
     </tr>
 
 <% end %>
 </table>
 
-<div><%= link_to "All Media", root_path %>
-<%= link_to "Add an Album", new_album_path %></div>
+<div><%= link_to "All Media", root_path, class:"btn btn-primary active", role:"button" %>
+<%= link_to "Add an Album", new_album_path, class:"btn btn-primary active", role:"button" %></div>
