@@ -3,6 +3,10 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+  def top_books
+    @books = Book.all.sort_by{|book| book.rank}.reverse.first(7)
+  end
+
   def voteup
     book = Book.find(params[:id])
     book.rankup

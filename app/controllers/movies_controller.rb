@@ -3,6 +3,10 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
+  def top_albums
+    @movies = Movie.all.sort_by{|movie| movie.rank}.reverse.first(7)
+  end
+
   def voteup
     movie = Movie.find(params[:id])
     movie.rankup

@@ -3,6 +3,10 @@ class AlbumsController < ApplicationController
     @albums = Album.all
   end
 
+  def top_albums
+    @albums = Album.all.sort_by{|album| album.rank}.reverse.first(7)
+  end
+
   def voteup
     album = Album.find(params[:id])
     album.rankup
